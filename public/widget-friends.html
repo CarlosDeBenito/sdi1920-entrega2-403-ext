@@ -1,0 +1,33 @@
+<div id="widget-friends">
+	<span class="label label-primary" id="userAuthenticatedAs">
+		Usuario autenticado:
+	</span>
+
+	<h2>
+		Listado de tus amigos<br>
+		<small>Selecciona el nombre de un amigo para acceder a su chat</small>
+	</h2>
+
+	<input type="text" class="form-control"
+		   placeholder="Filtrar por nombre" id="filterName" />
+
+	<table class="table table-hover">
+		<thead>
+		<tr>
+			<th>Nombre</th>
+			<th>Email</th>
+		</tr>
+		</thead>
+		<tbody id="friendsTableBody">
+
+		</tbody>
+	</table>
+
+	<footer class="footer">
+		<div class="container" id="friendsFooterContainer">
+			<span class="text-muted" id="friendsFooterMessage"></span>
+		</div>
+	</footer>
+</div>
+
+<script src="/js/widgets/widget-friends.js"></script>

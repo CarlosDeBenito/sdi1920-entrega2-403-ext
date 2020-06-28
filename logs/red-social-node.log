@@ -1,0 +1,4 @@
+[05-05-2020 14:24:17] [INFO] - [API] - El usuario con email 'barbara@uniovi.es' se ha autenticado y se le ha devuelto un token de seguridad.
+[05-05-2020 14:24:17] [INFO] - [API] - El usuario con email 'barbara@uniovi.es' ha accedido a su lista de amigos, siendo sus emails los siguientes: {}
+[05-05-2020 14:36:05] [WARN] - Error producido: TypeError [ERR_INVALID_ARG_TYPE]: The "key" argument must be of type string or an instance of Buffer, TypedArray, DataView, or KeyObject. Received undefined
+[05-05-2020 14:36:29] [WARN] - Error producido: TypeError [ERR_INVALID_ARG_TYPE]: The "key" argument must be of type string or an instance of Buffer, TypedArray, DataView, or KeyObject. Received undefined

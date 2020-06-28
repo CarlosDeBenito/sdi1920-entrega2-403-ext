@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block titulo %} Inicio {% endblock %}
+
+{% block scripts %} <link rel="stylesheet" href="/css/center_text.css" /> {% endblock %}
+
+{% block contenido_principal %}
+<h2>¡Se ha producido un error!</h2>
+
+<div class="alert alert-danger" role="alert">
+    {{ errorMessage }}
+    <a id="aIndex" href="/" class="alert-link"> Vuelve al Inicio.</a>
+</div>
+{% endblock %}

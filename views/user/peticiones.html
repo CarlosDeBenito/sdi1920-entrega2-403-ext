@@ -1,0 +1,42 @@
+{% extends "../base.html" %}
+
+{% block titulo %} Peticiones {%endblock %}
+
+{% block contenido_principal %}
+
+<h2>Peticiones pendientes</h2>
+
+<div class="table-responsive">
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<th>Email</th>
+				<th>Nombre</th>
+				<th>Apellidos</th>
+				<th class="col-md-1"></th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for peticion in peticiones %}
+			<tr>
+				<td>{{ peticion.emailUsuarioEnvia}}</td>
+				<td>{{ peticion.usuarioEnvia.nombre }}</td>
+				<td>{{ peticion.usuarioEnvia.apellidos }}</td>
+
+				<td>
+					<div>
+						<a href="/user/aceptar/{{ peticion._id.toString() }}"
+							id="acceptInvitationButton{{ peticion.emailUsuarioEnvia }}"
+							class="btn btn-default">Aceptar</a>
+					</div>
+				</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+
+<!-- Incluimos el sistema de paginación -->
+{% include "../fragments/pagination.html" with {url: "/user/peticiones"} %}
+
+{% endblock %}

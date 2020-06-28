@@ -1,0 +1,52 @@
+<html lang="en">
+
+<head>
+    <title>Mensajería</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/cliente.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/js/cookie.js"></script>
+</head>
+
+<body>
+
+    <!-- Barra de Navegación superior -->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav" id="barra-menu">
+                    <li><a id="aLogin" onclick="loadWidgetAndStopIntervals('login')">Login</a></li>
+                    <li><a id="aFriendsList" onclick="loadWidgetAndStopIntervals('friends')">Amigos</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right" id="barra-menu-derecha">
+                    <!-- Opciones de menú aqui -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!--  id para identificar -->
+        <div id="messageContainer">
+            <!-- Aqui se mostrarán los mensajes -->
+        </div>
+        <div id="contenedor-principal">
+            <!-- Contenido -->
+        </div>
+    </div>
+
+    <script src="js/cliente.js"></script>
+
+</body>
+
+</html>
