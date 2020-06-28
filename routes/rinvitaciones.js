@@ -147,4 +147,27 @@ module.exports = function (app, swig, gestorBD) {
         });
     }
 
+    app.get("/user/rechazar/:id", function (req, res) {
+        var criterio = { "_id": gestorBD.mongo.ObjectID(req.params.id) };
+
+        gestorBD.obtenerPeticiones(criterio, function (peticiones) {
+            if (peticiones == null) {
+                // Error
+                res.redirect("/user/peticiones?message=Error al rechazar la petición de amistad");
+            } else if (peticiones.length == 0) {
+                res.redirect("/user/peticiones?message=Esa petición de amistad no existe");
+            } else {
+                receptorPeticionRechazar(req, res, peticiones[0]);
+            }
+        });
+    });
+
+    function receptorPeticionRechazar(req, res, peticion) {
+        if (peticion.emailUsuarioRecibe != req.session.email) {
+            res.redirect("/user/peticiones?message=¡No puedes rechazar una petición de amistad que no te han enviado a ti!");
+        } else {
+            eliminarPeticionTrasAceptar(req, res, peticion);
+        }
+    }
+
 }

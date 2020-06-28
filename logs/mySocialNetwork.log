@@ -6968,3 +6968,37 @@
 [20-06-2020 18:24:32] [INFO] - [API] - El usuario con email 'user7@gmail.com' ha marcado como leído el mensaje con id '5eee3824acebda39fc68d8f3'.
 [20-06-2020 18:24:32] [INFO] - [API] - El usuario con email 'user7@gmail.com' ha marcado como leído el mensaje con id '5eee3826acebda39fc68d8f5'.
 [20-06-2020 18:24:41] [INFO] - [API] - El usuario con email 'user7@gmail.com' ha obtenido todos los mensajes intercambiados con un amigo suyo, cuyo email es 'user6@gmail.com'.
+[28-06-2020 18:07:04] [INFO] - El usuario 'user6@gmail.com' ha iniciado sesión.
+[28-06-2020 18:07:05] [INFO] - El usuario 'user6@gmail.com' ha listado a los usuarios. 
+[28-06-2020 19:34:50] [INFO] - El usuario 'user6@gmail.com' ha iniciado sesión.
+[28-06-2020 19:34:51] [INFO] - El usuario 'user6@gmail.com' ha listado a los usuarios. 
+[28-06-2020 19:34:57] [INFO] - El usuario 'user6@gmail.com' ha listado a los usuarios. 
+[28-06-2020 19:35:01] [INFO] - El usuario 'user6@gmail.com' ha listado a los usuarios. 
+[28-06-2020 19:35:06] [INFO] - El usuario 'user6@gmail.com' ha listado a los usuarios. 
+[28-06-2020 19:35:14] [INFO] - El usuario 'user6@gmail.com' ha listado a los usuarios. 
+[28-06-2020 19:35:17] [INFO] - El usuario 'user6@gmail.com' ha mandado una petición al usuario 'user3@gmail.com'.
+[28-06-2020 19:35:17] [INFO] - El usuario 'user6@gmail.com' ha listado a los usuarios. 
+[28-06-2020 19:35:19] [INFO] - El usuario 'user6@gmail.com' se ha desconectado.
+[28-06-2020 19:35:27] [INFO] - El usuario 'user3@gmail.com' ha iniciado sesión.
+[28-06-2020 19:35:28] [INFO] - El usuario 'user3@gmail.com' ha listado a los usuarios. 
+[28-06-2020 19:35:31] [INFO] - El usuario 'user3@gmail.com'ha listado sus peticiones. 
+[28-06-2020 19:47:29] [INFO] - El usuario 'user6@gmail.com' ha iniciado sesión.
+[28-06-2020 19:47:29] [INFO] - El usuario 'user6@gmail.com' ha listado a los usuarios. 
+[28-06-2020 19:47:37] [INFO] - El usuario 'user6@gmail.com'ha listado sus peticiones. 
+[28-06-2020 19:47:39] [INFO] - El usuario 'user6@gmail.com' ha listado sus amigos. 
+[28-06-2020 19:47:44] [INFO] - El usuario 'user6@gmail.com' ha listado a los usuarios. 
+[28-06-2020 19:47:47] [INFO] - El usuario 'user6@gmail.com' ha listado a los usuarios. 
+[28-06-2020 19:47:50] [INFO] - El usuario 'user6@gmail.com' se ha desconectado.
+[28-06-2020 19:47:57] [INFO] - El usuario 'user2@gmail.com' ha iniciado sesión.
+[28-06-2020 19:47:58] [INFO] - El usuario 'user2@gmail.com' ha listado a los usuarios. 
+[28-06-2020 19:48:00] [INFO] - El usuario 'user2@gmail.com'ha listado sus peticiones. 
+[28-06-2020 19:48:04] [INFO] - El usuario 'user2@gmail.com' ha aceptado la petición del usuario 'user6@gmail.com'.
+[28-06-2020 19:48:05] [INFO] - El usuario 'user2@gmail.com' ha listado sus amigos. 
+[28-06-2020 19:48:12] [INFO] - El usuario 'user2@gmail.com' ha listado sus amigos. 
+[28-06-2020 19:48:15] [INFO] - El usuario 'user2@gmail.com' ha listado sus amigos. 
+[28-06-2020 19:48:20] [INFO] - El usuario 'user2@gmail.com'ha listado sus peticiones. 
+[28-06-2020 19:48:21] [INFO] - El usuario 'user2@gmail.com' se ha desconectado.
+[28-06-2020 19:48:26] [INFO] - El usuario 'user6@gmail.com' ha iniciado sesión.
+[28-06-2020 19:48:27] [INFO] - El usuario 'user6@gmail.com' ha listado a los usuarios. 
+[28-06-2020 19:48:29] [INFO] - El usuario 'user6@gmail.com' ha mandado una petición al usuario 'user2@gmail.com'.
+[28-06-2020 19:48:30] [INFO] - El usuario 'user6@gmail.com' ha listado a los usuarios. 
