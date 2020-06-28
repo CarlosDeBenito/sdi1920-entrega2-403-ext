@@ -3,7 +3,9 @@ module.exports = {
     init: function (app, mongo) {
         this.mongo = mongo;
         this.app = app;
-    }, obtenerUsuarios: function (criterio, funcionCallback) {
+    },
+
+    obtenerUsuarios: function (criterio, funcionCallback) {
         this.mongo.MongoClient.connect(this.app.get('db'), function (err, db) {
             if (err) {
                 funcionCallback(null);
@@ -19,7 +21,9 @@ module.exports = {
                 });
             }
         });
-    }, insertarUsuario: function (usuario, funcionCallback) {
+    },
+
+    insertarUsuario: function (usuario, funcionCallback) {
         this.mongo.MongoClient.connect(this.app.get('db'), function (err, db) {
             if (err) {
                 funcionCallback(null, "Error al crear el usuario");
@@ -35,7 +39,10 @@ module.exports = {
                 });
             }
         });
-    }, obtenerUsuariosPg: function (criterio, pg, funcionCallback) {
+    },
+
+
+    obtenerUsuariosPg: function (criterio, pg, funcionCallback) {
         var itemsPerPage = this.app.get('itemsPerPage');
 
         this.mongo.MongoClient.connect(this.app.get('db'), function (err, db) {
@@ -81,6 +88,7 @@ module.exports = {
             }
         });
     },
+
     obtenerAmistadesPg: function (criterio, pg, funcionCallback) {
         var itemsPerPage = this.app.get('itemsPerPage');
 
@@ -109,6 +117,7 @@ module.exports = {
             }
         });
     },
+
     enviarPeticion: function (peticion, funcionCallback) {
         var propio = this;
 
@@ -302,6 +311,25 @@ module.exports = {
                         funcionCallback(null);
                     } else {
                         funcionCallback(result.ops[0]._id);
+                    }
+                    db.close();
+                });
+            }
+        });
+    },
+
+    borrarAmistad: function (criterio, funcionCallback) {
+        this.mongo.MongoClient.connect(this.app.get('db'), function (err, db) {
+            if (err) {
+                funcionCallback(null);
+            } else {
+                var collection = db.collection('amigos');
+                collection.remove(criterio, function (err, result) {
+                    if (err) {
+                        funcionCallback(null);
+                    }
+                    else {
+                        funcionCallback(result);
                     }
                     db.close();
                 });

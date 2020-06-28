@@ -170,4 +170,30 @@ module.exports = function (app, swig, gestorBD) {
         }
     }
 
+    app.get("/user/dejarDeSerAmigos/:id", function (req, res) {
+        var criterio = {
+            emailUsuarioEnvia: req.session.email,
+            emailUsuarioRecibe: req.params.id
+        };
+        gestorBD.borrarAmistad(criterio, function (id) {
+            if (id == null) {
+                criterio2 = {
+                    emailUsuarioEnvia2: req.params.id,
+                    emailUsuarioRecibe2: req.session.email
+                };
+                gestorBD.borrarAmistad(criterio2, function (id2) {
+                    if (id2 == null) {
+                        res.redirect("/user/amigos?message=Error al borrar la amistad");
+                    }
+                    else {
+                        res.redirect("/user/list?message=Amistad eliminada correctamente");
+                    }
+                });
+            } else {
+                res.redirect("/user/list?message=Amistad eliminada correctamente");
+            }
+
+        });
+    });
+
 }
