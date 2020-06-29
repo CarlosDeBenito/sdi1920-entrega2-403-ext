@@ -20,13 +20,6 @@
 				<td>{{ amigo.nombre }}</td>
 				<td>{{ amigo.email }}</td>
 
-				<td>
-					<div>
-						<a href="/user/dejarDeSerAmigos/{{ amigo.email.toString() }}"
-							id="dejarDeSerAmigosButton{{ amigo.email.toString() }}">Dejar de ser amigos</a>
-					</div>
-				</td>
-
 			</tr>
 			{% endfor %}
 		</tbody>

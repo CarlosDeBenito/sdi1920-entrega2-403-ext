@@ -147,53 +147,6 @@ module.exports = function (app, swig, gestorBD) {
         });
     }
 
-    app.get("/user/rechazar/:id", function (req, res) {
-        var criterio = { "_id": gestorBD.mongo.ObjectID(req.params.id) };
 
-        gestorBD.obtenerPeticiones(criterio, function (peticiones) {
-            if (peticiones == null) {
-                // Error
-                res.redirect("/user/peticiones?message=Error al rechazar la petición de amistad");
-            } else if (peticiones.length == 0) {
-                res.redirect("/user/peticiones?message=Esa petición de amistad no existe");
-            } else {
-                receptorPeticionRechazar(req, res, peticiones[0]);
-            }
-        });
-    });
-
-    function receptorPeticionRechazar(req, res, peticion) {
-        if (peticion.emailUsuarioRecibe != req.session.email) {
-            res.redirect("/user/peticiones?message=¡No puedes rechazar una petición de amistad que no te han enviado a ti!");
-        } else {
-            eliminarPeticionTrasAceptar(req, res, peticion);
-        }
-    }
-
-    app.get("/user/dejarDeSerAmigos/:id", function (req, res) {
-        var criterio = {
-            emailUsuarioEnvia: req.session.email,
-            emailUsuarioRecibe: req.params.id
-        };
-        gestorBD.borrarAmistad(criterio, function (id) {
-            if (id == null) {
-                criterio2 = {
-                    emailUsuarioEnvia2: req.params.id,
-                    emailUsuarioRecibe2: req.session.email
-                };
-                gestorBD.borrarAmistad(criterio2, function (id2) {
-                    if (id2 == null) {
-                        res.redirect("/user/amigos?message=Error al borrar la amistad");
-                    }
-                    else {
-                        res.redirect("/user/list?message=Amistad eliminada correctamente");
-                    }
-                });
-            } else {
-                res.redirect("/user/list?message=Amistad eliminada correctamente");
-            }
-
-        });
-    });
 
 }
