@@ -23,6 +23,7 @@ module.exports = function (app, swig, gestorBD) {
         });
     });
 
+
     app.get("/user/peticiones", function (req, res) {
         var criterio = {
             emailUsuarioRecibe: req.session.email
